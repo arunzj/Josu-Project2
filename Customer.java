@@ -9,7 +9,7 @@ public abstract class Customer {
 
     public abstract double incentives();
     public  String toString(){
-       return String.format("%s, %s %s", customerID,firstName,lastName);
+       return String.format("%s, %s %s\n%s", customerID,firstName,lastName,customerLevel);
 
     }
 
