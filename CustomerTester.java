@@ -7,7 +7,7 @@ public class CustomerTester {
         //creating an arrayList of type Customer
         List<Customer> customerList = new ArrayList<>(4);
         BusinessCustomer businessCustomer = new BusinessCustomer("Ronald", "Bagaporo", "Business Customer", 
-        "Business Customer with Home Depot", 10, 3105.50);
+        "Home Depot", 10, 3105.50);
         RetailCustomer retailCustomer  = new RetailCustomer("Vinayak", "Dev", "Retail Customer", 11200.00);
         PreferredCustomer preferredCustomer = new PreferredCustomer("Austin", "O’Neill",
          "Preferred Customer", 6456.85, 5);
@@ -22,11 +22,28 @@ public class CustomerTester {
         System.out.println("This program will instantiate objects of the Customer hierarchy and test their methods");
         drawLine(86);
 
-
          for(Customer customer : customerList){
             System.out.println(customer.toString());
-            System.out.println();
+            
          }
+            
+         for(Customer customer : customerList){
+            System.out.println(customer.getFirstName()+" "+customer.getLastName()+" earns a discount incentive of $"+customer.incentives());
+         }
+         System.out.println();
+
+         //Second group of customers
+         List<Customer> customerList2 = new ArrayList<>(4);
+         BusinessCustomer businessCustomer2 = new BusinessCustomer("Bhavesh", "Savaliya", "Business Customer", 
+        "Starbucks", 15, 9875.25);
+        //TODO fill rest
+
+        customerList2.add(businessCustomer2);
+
+        for(Customer customer:customerList2 ){
+            System.out.println(customer.toString());
+            System.out.println();
+        }
     }
 
     private static void drawLine(int n){

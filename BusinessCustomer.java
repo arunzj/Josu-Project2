@@ -37,7 +37,7 @@ public class BusinessCustomer extends Customer{
     }
     @Override
     public String toString() {
-        String fmtStr = String.format("\n%s\n%-20s$%s\n%-20s%s%%\n%-20s$%s\n%-20s$%s",
+        String fmtStr = String.format(" for %s\n%-20s$%s\n%-20s%s%%\n%-20s$%s\n%-20s$%s",
         companyName,"Total Purchases:",totalPurchases,"Discount Rate:",discountRate,"Discount Incentive:",incentives(),"Net Purchases:",totalPurchases-incentives());
         return super.toString()+fmtStr;
     }
